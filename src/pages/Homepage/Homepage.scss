@@ -5,59 +5,6 @@
 // @import 'sass/global_styles/global';
 // @import "sass/commonSections/download_apps";
 
-.homepage-hero-image {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 60px 0 120px;
-
-  @media #{$betweentabdesk} {
-    padding: 50px 0 20px;
-  }
-
-  @media #{$maxTab} {
-    padding: 60px 0 20px;
-  }
-
-  @media (min-width: 992px) {
-    height: calc(100% - 116px);
-  }
-
-  h1 {
-    font-weight: 700;
-    font-size: 55px;
-    margin-bottom: 36px;
-
-    @media #{$betweentabdesk} {
-      font-size: 39px;
-    }
-
-    @media #{$tablet} {
-      font-size: 28px;
-      margin-bottom: 24px;
-    }
-
-    @media #{$mobile} {
-      font-size: 28px;
-      margin-bottom: 24px;
-    }
-  }
-
-  .image img {
-    @media (max-width: 992px) {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
-  }
-}
-
-.hero-left .form-group {
-  @media (min-width: 1400px) {
-    max-width: 520px;
-  }
-}
-
 .hp-search .form-group {
   @media #{$maxTab} {
     background: none;
@@ -275,7 +222,7 @@
 }
 
 // Upgrade Premium
-.upgrade-premium {
+.upgrade-premium-section {
   background-image: url(../../imgs/homepage/upgrade-bg.png);
   background-color: #2c2ffe;
   padding-top: 150px;
@@ -612,7 +559,8 @@
   }
 }
 
-.users-reviews {
+.users-reviews-section,
+.hide-number-section {
   position: relative;
   background: #fcf3eb;
 

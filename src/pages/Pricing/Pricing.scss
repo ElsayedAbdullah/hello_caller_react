@@ -1,0 +1,578 @@
+@import '../../variables.scss';
+
+.pricing-page {
+  .phone-error {
+    color: #c8102e;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+    display: none;
+    margin-left: 24px;
+    position: absolute;
+  }
+
+  // Upgrade Premium
+  .upgrade-premium {
+    background-image: url(../../imgs/homepage/upgrade-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2c2ffe;
+    padding: 80px 0;
+
+    @media #{$maxTab} {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      margin-bottom: 60px;
+
+      @media #{$tablet} {
+        margin-bottom: 40px;
+      }
+
+      @media #{$mobile} {
+        margin-bottom: 32px;
+      }
+    }
+
+    h3 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 50px;
+
+      span {
+        font-weight: 400;
+        font-size: 20px;
+
+        @media #{$mobile} {
+          font-size: 15px;
+          display: block;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1200px) {
+        font-size: 24px;
+      }
+
+      @media #{$mobile} {
+        font-size: 17px;
+        margin-bottom: 38px;
+      }
+    }
+
+    .pricing-plans {
+      .plan {
+        padding: 60px 40px 40px;
+        position: relative;
+        background: #ffffff;
+        box-shadow: 0px 23px 60px rgba(54, 55, 69, 0.3);
+        border-radius: 17px;
+
+        @media #{$betweentabdesk} {
+          padding: 50px 24px 30px;
+        }
+
+        @media #{$tablet} {
+          margin-bottom: 20px;
+        }
+
+        @media #{$mobile} {
+          padding: 20px;
+          margin-bottom: 12px;
+        }
+
+        &.main-plan {
+          box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
+          position: relative;
+
+          @media #{$mobile} {
+            padding-top: 32px;
+          }
+
+          .recommended {
+            position: absolute;
+            top: -21px;
+            left: 40px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 18px;
+            color: #ffffff;
+            padding: 12px 24px;
+            background: #fb5b29;
+            border-radius: 76px;
+
+            @media #{$betweentabdesk} {
+              font-size: 16px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            @media #{$mobile} {
+              padding: 5px 10px;
+              font-size: 13px;
+              left: 20px;
+              top: -14px;
+
+              svg {
+                width: 12px;
+                height: auto;
+              }
+            }
+          }
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid #eeeef5;
+
+          @media #{$mobile} {
+            border-bottom: 1px solid #eeeef5;
+            border-right: 0;
+          }
+        }
+
+        &.year-plan {
+          color: #2c2ffe;
+
+          .subscribe-btn {
+            color: #2c2ffe;
+            background: #dfe0ff;
+
+            &:hover {
+              background: #d3d4fb;
+            }
+
+            &:active {
+              background: #edeeff;
+            }
+          }
+        }
+
+        &.six-months-plan {
+          color: #fb5b29;
+
+          .subscribe-btn {
+            color: #fb5b29;
+            background: #ffdfd6;
+
+            &:hover {
+              background: #fdd0c4;
+            }
+
+            &:active {
+              background: #ffefeb;
+            }
+          }
+        }
+
+        &.month-plan {
+          color: #ff9c00;
+
+          .subscribe-btn {
+            color: #ff9c00;
+            background: #ffeac8;
+
+            &:hover {
+              background: #fadeb3;
+            }
+
+            &:active {
+              background: #fff1da;
+            }
+          }
+        }
+
+        &.seven-days-plan {
+          color: #9a65ff;
+
+          .subscribe-btn {
+            color: #9a65ff;
+            background: #e8dcff;
+
+            &:hover {
+              background: #d9c8fb;
+            }
+
+            &:active {
+              background: #f2ebff;
+            }
+          }
+        }
+      }
+
+      .plan-period {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+        color: #000000;
+        margin-bottom: 20px;
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+          font-size: 24px;
+        }
+
+        @media #{$betweentabdesk} {
+          font-size: 22px;
+        }
+
+        @media #{$mobile} {
+          font-size: 17px;
+          line-height: 27px;
+          margin: 0 0 16px;
+        }
+
+        .off {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 38px;
+          color: #474c4d;
+
+          @media (max-width: 1400px) {
+            font-size: 15px;
+          }
+
+          @media #{$tablet} {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .plan-price {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 58px;
+        position: relative;
+        display: inline-flex !important;
+
+        @media #{$mobile} {
+          font-size: 34px;
+          line-height: 44px;
+        }
+
+        .cent {
+          font-size: 28px;
+          line-height: 15px;
+          position: relative;
+          top: 10px;
+          right: -5px;
+
+          @media #{$mobile} {
+            font-size: 17px;
+            line-height: 15px;
+          }
+        }
+      }
+
+      .plan-autorenewal-text {
+        font-size: 20px;
+        color: #474c4d;
+        margin: 15px 0 0;
+        line-height: 30px;
+
+        @media (min-width: 1400px) {
+          margin: 15px 0 0;
+          width: 162px;
+        }
+
+        @media #{$betweentabdesk} {
+          font-size: 19px;
+        }
+
+        @media #{$mobile} {
+          margin: 0 0 12px;
+          font-size: 15px;
+        }
+      }
+
+      .divider {
+        margin: 20px 0;
+        width: 24px;
+        background-color: #d9d9d9;
+        height: 1px;
+
+        @media #{$mobile} {
+          margin: 15px 0;
+        }
+      }
+
+      .plan-features {
+        margin-bottom: 24px;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          &:not(:last-of-type) {
+            margin-bottom: 8px;
+          }
+
+          svg {
+            margin-right: 12px;
+          }
+
+          p {
+            font-size: 18px;
+            color: #000;
+
+            @media #{$betweentabdesk} {
+              font-size: 16px;
+            }
+
+            @media #{$mobile} {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .subscribe-btn {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 28px;
+        display: block;
+        padding: 14px;
+        text-align: center;
+        border-radius: 7px;
+        transition: 0.2s ease-in-out;
+
+        @media #{$maxTab} {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .users-reviews {
+    .hide-number {
+      background: #ecfbff;
+      border-radius: 25px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media #{$maxTab} {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+    }
+
+    .service-cost {
+      border-right: 1px solid #dff1f7;
+      padding-right: 30px;
+      display: flex;
+      align-items: center;
+      width: 60%;
+
+      @media #{$betweentabdesk} {
+        width: 50%;
+        padding-right: 20px;
+      }
+
+      @media #{$maxTab} {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #dff1f7;
+        padding-right: 0;
+        padding-bottom: 16px;
+      }
+    }
+
+    .insert-number {
+      padding-left: 30px;
+      width: 40%;
+
+      @media #{$betweentabdesk} {
+        width: 50%;
+        padding-left: 20px;
+      }
+
+      @media #{$maxTab} {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 16px;
+      }
+
+      h6 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        @media #{$maxTab} {
+          font-size: 15px;
+          line-height: 24px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    .price {
+      background: #ffffff;
+      box-shadow: 0px 33px 90px rgba(76, 76, 108, 0.1);
+      border-radius: 25px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      .icon {
+        background: #f8fbfd;
+        border-radius: 25px;
+        padding: 18px;
+        margin-right: 24px;
+      }
+
+      .value {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 58px;
+        color: #2c2ffe;
+        position: relative;
+        padding-right: 50px;
+
+        .cent {
+          position: absolute;
+          top: 10px;
+          right: 12px;
+          font-size: 28px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    .service-text {
+      h5 {
+        font-size: 28px;
+        margin-bottom: 20px;
+
+        @media #{$tablet} {
+          font-size: 25px;
+          margin-bottom: 15px;
+        }
+
+        @media #{$mobile} {
+          font-size: 17px;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+        }
+
+        .hide-price {
+          font-weight: 700;
+          font-size: 17px;
+          line-height: 27px;
+          color: #2c2ffe;
+          direction: ltr;
+
+          @media (min-width: 768px) and (max-width: 1200px) {
+            font-size: 27px;
+          }
+        }
+      }
+
+      p {
+        font-size: 20px;
+        color: #474c4d;
+
+        @media #{$tablet} {
+          font-size: 18px;
+        }
+
+        @media #{$mobile} {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  body.rtl {
+    .upgrade-premium .pricing-plans .plan-price {
+      direction: ltr;
+    }
+
+    .upgrade-premium .pricing-plans .plan.main-plan .recommended {
+      right: 40px;
+      left: auto;
+
+      .mr-1 {
+        margin-right: 0 !important;
+        margin-left: 0.25rem !important;
+      }
+
+      @media (min-width: 768px) {
+        .mr-md-2 {
+          margin-right: 0 !important;
+          margin-left: 0.5rem !important;
+        }
+      }
+
+      @media #{$betweentabdesk} {
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      @media #{$mobile} {
+        right: 20px;
+      }
+    }
+
+    .upgrade-premium .pricing-plans .plan-features li svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+
+    .users-reviews .price .icon {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+
+    .users-reviews .price {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+
+    .users-reviews .service-cost {
+      border-left: 1px solid #dff1f7;
+      border-right: 0;
+      padding-right: 0;
+      padding-left: 30px;
+
+      @media #{$maxTab} {
+        border-left: 0;
+      }
+    }
+
+    .users-reviews .insert-number {
+      padding-left: 0;
+      padding-right: 30px;
+
+      @media #{$maxTab} {
+        padding-right: 0;
+      }
+    }
+
+    .users-reviews .price .value {
+      padding-left: 10px;
+      direction: ltr;
+    }
+
+    .users-reviews .service-text h5 .hide-price {
+      margin-left: 0 !important;
+      margin-right: 5px;
+    }
+
+    @media #{$mobile} {
+      .users-reviews .service-text h5 .mr-2 {
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+      }
+    }
+  }
+}

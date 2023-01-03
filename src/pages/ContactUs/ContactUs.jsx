@@ -2,11 +2,25 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './ContactUs.scss';
+import Select from 'react-select';
+
+const options = [
+  { value: 'new-feature', label: 'I’d like to request a new feature' },
+  { value: 'have-quesiton', label: 'I have a question' },
+  { value: 'feedback', label: 'I have feedback on the app' },
+  { value: 'not-working', label: 'Something not working' },
+  { value: 'payment', label: 'Payment' },
+  { value: 'else', label: 'Something else' }
+];
 
 const ContactUs = () => {
+  const colorStyles = {
+    // eslint-disable-next-line no-sequences
+    control: (styles, state) => ({ ...styles, backgroundColor: 'white', height: '56px', boxShadow: '0px 3px 9px rgb(76 76 108 / 10%)', borderColor: state.isSelected ? '#b9c3c7' : '#d7dee0' })
+  };
   return (
     <>
-      <Header />
+      <Header className='search-header' />
       <div className='contact-us'>
         <div className='container'>
           <h1>Contact Us</h1>
@@ -22,14 +36,7 @@ const ContactUs = () => {
                 <form className='form-contact'>
                   <div className='form-group'>
                     <label htmlFor='reason'>Select a reason</label>
-                    <select name='reason' id='reason'>
-                      <option value='new-feature'>I’d like to request a new feature</option>
-                      <option value='have-quesiton'>I have a question</option>
-                      <option value='feedback'>I have feedback on the app</option>
-                      <option value='not-working'>Something not working</option>
-                      <option value='payment'>Payment</option>
-                      <option value='else'>Something else</option>
-                    </select>
+                    <Select className='react-select-container' placeholder='Select a reason...' options={options} styles={colorStyles} />
                   </div>
                   <div className='form-group'>
                     <label htmlFor='name'>Name</label>

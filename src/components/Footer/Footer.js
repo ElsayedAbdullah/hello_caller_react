@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
-import appStpreBtn from '../../imgs/homepage/app-store-btn.svg';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../imgs/homepage/footer-logo.svg';
-import googlePlayBtn from '../../imgs/homepage/google-play-btn.svg';
-import huaweiBtn from '../../imgs/homepage/huawei-app-gallery-btn.svg';
 import saFlag from '../../imgs/sa.svg';
 import usaFlag from '../../imgs/us.svg';
 import './Footer.scss';
 
 const Footer = () => {
-  const [dropdown, setDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const btnRef = useRef();
+  const yearNow = new Date().getFullYear();
+
+  // to close dropdown when clicking outside of it
+  useEffect(() => {
+    const closeDropdown = (e) => {
+      const btn = e.target.closest('.language-dropdown');
+      if (btn !== btnRef.current) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.body.addEventListener('click', closeDropdown);
+
+    return () => {
+      document.body.removeEventListener('click', closeDropdown);
+    };
+  }, []);
+
   return (
     <footer className='bg-white'>
       <div className='container'>
@@ -30,16 +47,16 @@ const Footer = () => {
                 <ul className='footer-app-btns'>
                   <li>
                     <a href='https://play.google.com/store/apps/details?id=com.hello.calleridi' rel='noreferrer' target='_blank' className='app-btn'>
-                      <img width='152' height='44' className='img-fluid' src={googlePlayBtn} loading='lazy' alt='google-play-btn' />
+                      Google Play
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://appgallery.huawei.com/#/app/C104604511' target='_blank' className='app-btn' rel='noreferrer'>
+                      Huawei Gallery
                     </a>
                   </li>
                   <li className='text-left'>
-                    <img width='152' height='67' className='img-fluid d-block' src={appStpreBtn} loading='lazy' alt='app-store-btn' />
-                  </li>
-                  <li>
-                    <a href='https://appgallery.huawei.com/#/app/C104604511' className='app-btn'>
-                      <img width='152' height='44' className='img-fluid' src={huaweiBtn} loading='lazy' alt='huawei-app-gallery-btn' />
-                    </a>
+                    <p>App Store (...Soon!)</p>
                   </li>
                 </ul>
               </div>
@@ -49,12 +66,9 @@ const Footer = () => {
             <div className='footer-col'>
               <h5>Contact Info</h5>
               <ul>
+                <li>Dubai, United Arab Emirates</li>
                 <li>
-                  Aknan Towers, Al-Salmiya, <br />
-                  Kuwait - 20010
-                </li>
-                <li>
-                  <a href='mailto:ask@hellocallers.com'>ask@hellocallers.com</a>
+                  <a href='mailto:support@hellocallers.com'>support@hellocallers.com</a>
                 </li>
               </ul>
             </div>
@@ -64,16 +78,24 @@ const Footer = () => {
               <h5>Useful Links</h5>
               <ul>
                 <li>
-                  <a href='pricing.html'>Pricing</a>
+                  <Link to='/pricing' className='contact-link'>
+                    Pricing
+                  </Link>
                 </li>
                 <li>
-                  <a href='contactus.html'>Contact Us</a>
+                  <Link to='/contactus' className='contact-link'>
+                    Contact Us
+                  </Link>
                 </li>
                 <li>
-                  <a href='privacy-policy.html'>Privacy Policy</a>
+                  <Link to='/privacy-policy' className='contact-link'>
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li>
-                  <a href='terms-of-service.html'>Terms & Conditions</a>
+                  <Link to='/terms' className='contact-link'>
+                    Terms & Conditions
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -84,7 +106,7 @@ const Footer = () => {
           <div className='row align-items-center'>
             <div className='col-md-6 order-2 order-md-1'>
               <p className='copyright'>
-                &copy; <span id='year-now'></span> Hello? Caller ID. All rights reserved.
+                &copy; <span id='year-now'>{yearNow}</span> Hello? Caller ID. All rights reserved.
               </p>
             </div>
             <div className='col-md-6 order-1 order-md-2'>
@@ -122,16 +144,16 @@ const Footer = () => {
                   </li>
                 </ul>
                 <div className='position-relative' id='lang-dropdown2'>
-                  <button className='language-dropdown footer-lang-dropdown d-flex align-items-center justify-content-between' id='footerDropdown' onClick={() => setDropdown(!dropdown)} data-bs-toggle='dropdown' aria-expanded='false'>
+                  <button ref={btnRef} className='language-dropdown footer-lang-dropdown d-flex align-items-center justify-content-between' id='footerDropdown' onClick={() => setShowDropdown(!showDropdown)} data-bs-toggle='dropdown' aria-expanded='false'>
                     <span className='lang d-flex align-items-center'>
                       <img width='20' height='20' className='mr-2 img-fluid' src={usaFlag} alt='usa flag' loading='lazy' />
                       <span className='mr-2'>English</span>
                     </span>
-                    <svg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <svg className={`${showDropdown ? 'inverted' : ''}`} width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'>
                       <path d='M6.0001 7.40001L0.600098 2.00001L2.0001 0.600006L6.0001 4.60001L10.0001 0.600006L11.4001 2.00001L6.0001 7.40001Z' fill='black' />
                     </svg>
                   </button>
-                  <ul className={`dropdown-menu ${dropdown ? 'show' : ''}`} id='dropdown-menu2' aria-labelledby='footerDropdown'>
+                  <ul className={`dropdown-menu ${showDropdown ? 'show' : ''}`} id='dropdown-menu2' aria-labelledby='footerDropdown'>
                     <li>
                       <a className='dropdown-item active' href='/'>
                         <img width='20' height='20' className='mr-2 img-fluid' src={usaFlag} loading='lazy' alt='usa flag' />

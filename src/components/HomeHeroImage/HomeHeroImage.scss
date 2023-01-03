@@ -1,0 +1,69 @@
+@import '../../variables.scss';
+
+.iti__flag {
+  background-image: url('../../imgs/flags.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url('../../imgs/flags@2x.png');
+  }
+}
+
+.homepage-hero-image {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0 120px;
+
+  @media #{$betweentabdesk} {
+    padding: 50px 0 20px;
+  }
+
+  @media #{$maxTab} {
+    padding: 60px 0 20px;
+  }
+
+  @media (min-width: 992px) {
+    height: calc(100% - 116px);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 36px;
+
+    @media #{$betweentabdesk} {
+      font-size: 39px;
+    }
+
+    @media #{$tablet} {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    @media #{$mobile} {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .image img {
+    @media (max-width: 992px) {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+.hero-left .form-group {
+  @media (min-width: 1400px) {
+    max-width: 520px;
+  }
+}
+
+// .iti
+.iti {
+  flex: 1;
+}

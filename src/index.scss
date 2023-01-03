@@ -1,56 +1,56 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 /* arabic */
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format('woff2');
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 /* arabic */
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format('woff2');
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 /* arabic */
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/cairo/v20/SLXGc1nY6HkvalIkTpu0xg.woff2) format('woff2');
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(./fonts/Cairo_Regular.woff2) format("woff2");
+  src: url(./fonts/Cairo_Regular.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(./fonts/Cairo_Semi_Bold.woff2) format("woff2");
+  src: url(./fonts/Cairo_Semi_Bold.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: "Cairo";
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(./fonts/Cairo_Bold.woff2) format("woff2");
+  src: url(./fonts/Cairo_Bold.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -159,7 +159,6 @@
   -ms-flex-wrap: nowrap !important;
   flex-wrap: nowrap !important;
 }
-
 
 .justify-content-center {
   -ms-flex-pack: center !important;
@@ -1361,27 +1360,42 @@
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm,
+  .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1320px;
   }
 }
@@ -1400,12 +1414,75 @@
   margin-left: -15px;
 }
 
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
 .col-xl-auto {
   position: relative;
   width: 100%;
@@ -1617,7 +1694,7 @@
     -ms-flex-order: 4;
     order: 4;
   }
- 
+
   .offset-md-0 {
     margin-left: 0;
   }
@@ -1630,7 +1707,6 @@
   .offset-md-3 {
     margin-left: 25%;
   }
-  
 }
 
 @media (min-width: 992px) {
@@ -1727,7 +1803,7 @@
     -ms-flex-order: 4;
     order: 4;
   }
-  
+
   .offset-lg-0 {
     margin-left: 0;
   }
@@ -1840,7 +1916,7 @@
     -ms-flex-order: 4;
     order: 4;
   }
-  
+
   .offset-xl-0 {
     margin-left: 0;
   }
@@ -2014,7 +2090,7 @@ label {
   display: inline-block;
 }
 .position-static {
-  position: static!important;
+  position: static !important;
 }
 
 .flex-shrink-0 {
@@ -2055,7 +2131,7 @@ body {
   overflow-x: hidden;
   color: #000;
   background-color: #fff;
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   line-height: 160%;
 }
 
@@ -2065,7 +2141,7 @@ body.overlay {
 }
 
 body.overlay:after {
-  content: "";
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
@@ -2105,7 +2181,7 @@ h6 {
   border-radius: 7px;
   border: 0;
   transition: all 0.2s ease-in-out;
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   cursor: pointer;
 
   &:hover {
@@ -2192,11 +2268,11 @@ input:focus {
 }
 
 .iti--allow-dropdown input,
-.iti--allow-dropdown input[type="text"],
-.iti--allow-dropdown input[type="tel"],
+.iti--allow-dropdown input[type='text'],
+.iti--allow-dropdown input[type='tel'],
 .iti--separate-dial-code input,
-.iti--separate-dial-code input[type="text"],
-.iti--separate-dial-code input[type="tel"] {
+.iti--separate-dial-code input[type='text'],
+.iti--separate-dial-code input[type='tel'] {
   &::placeholder {
     font-weight: normal;
   }
@@ -2321,19 +2397,18 @@ textarea:focus::placeholder {
 input,
 textarea,
 button {
-  font-family: "Cairo";
+  font-family: 'Cairo';
 }
 
 .search {
   .form-group {
-    background: #ffffff;
-    box-shadow: 0px 12px 50px rgba(76, 76, 108, 0.15);
-    border-radius: 79px;
-    border: 1px solid transparent;
-    padding: 8px;
-    transition: 0.2s;
-
     @media (min-width: 992px) {
+      background: #ffffff;
+      box-shadow: 0px 12px 50px rgba(76, 76, 108, 0.15);
+      border-radius: 79px;
+      border: 1px solid transparent;
+      padding: 8px;
+      transition: 0.2s;
       &:hover {
         box-shadow: 0px 4px 12px rgba(76, 76, 108, 0.15);
       }
@@ -2535,7 +2610,7 @@ button {
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 5px;
@@ -2561,11 +2636,11 @@ button {
 
 body.rtl {
   .iti--allow-dropdown input,
-  .iti--allow-dropdown input[type="text"],
-  .iti--allow-dropdown input[type="tel"],
+  .iti--allow-dropdown input[type='text'],
+  .iti--allow-dropdown input[type='tel'],
   .iti--separate-dial-code input,
-  .iti--separate-dial-code input[type="text"],
-  .iti--separate-dial-code input[type="tel"] {
+  .iti--separate-dial-code input[type='text'],
+  .iti--separate-dial-code input[type='tel'] {
     margin-left: 0;
     margin-right: -10px;
     direction: ltr;
@@ -2586,7 +2661,7 @@ body.rtl {
     right: auto;
   }
 
-  .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  .select2-container--default[dir='rtl'] .select2-selection--single .select2-selection__arrow {
     left: 20px;
   }
 
