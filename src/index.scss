@@ -2703,3 +2703,34 @@ body.rtl {
 select:not(.iti-mobile-select) {
   width: auto !important;
 }
+
+.install-app {
+  background: #000000;
+  border-radius: 58px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 14px 32px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 9999;
+  border: 0;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+  @media #{$tablet} {
+    right: 20px;
+  }
+  @media #{$mobile} {
+    left: 20px;
+    right: 20px;
+    padding: 6px;
+  }
+}

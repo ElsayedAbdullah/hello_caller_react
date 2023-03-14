@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.scss';
+import { HelmetProvider } from 'react-helmet-async';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ContactUs from './pages/ContactUs/ContactUs';
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();

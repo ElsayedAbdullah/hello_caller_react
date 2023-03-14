@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../imgs/homepage/footer-logo.svg';
 import saFlag from '../../imgs/sa.svg';
 import usaFlag from '../../imgs/us.svg';
+import InstallPWA from '../InstallPWA';
 import './Footer.scss';
 
 const Footer = () => {
@@ -173,6 +174,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <InstallPWA />
     </footer>
   );
 };
